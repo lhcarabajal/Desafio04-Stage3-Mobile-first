@@ -1,0 +1,104 @@
+:root {
+  font-size: 62.5%;
+  --font-fam-titles: "Staatliches", cursive;
+  --font-fam-descrition: "Palanquin", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.page {
+  width: 38.4rem;
+  margin: 0 auto;
+}
+
+/*Header*/
+.cabeçalho {
+  background: #8e9aaf;
+  width: 100%;
+  height: 27.9rem;
+}
+.cabeçalho img {
+  width: 13.7rem;
+  margin: 3.2rem 12.4rem;
+}
+.cabeçalho h1 {
+  background-color: #cbc0d3;
+  padding: 0.8rem 8.6rem;
+  text-align: center;
+  font-family: var(--font-fam-titles);
+  color: #ffffff;
+  font-weight: normal;
+}
+
+/*Main-cards*/
+.main-cards {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #eff1ff;
+  padding: 1rem 3.2rem 6rem;
+  gap: 3.2rem;
+}
+.main-cards p {
+  margin: 1.4rem 0 3.2rem 0;
+  font-family: var(--font-fam-descrition);
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+.card {
+  position: relative;
+}
+
+.card img {
+  animation-name: baixocima;
+  animation-duration: 1.5s;
+}
+.card span {
+  position: absolute;
+  width: 11.2rem;
+  font-family: var(--font-fam-titles);
+  background-color: #feeafa;
+  border-radius: 2rem;
+  color: #4a4e69;
+  font-size: 2rem;
+  line-height: 3.4rem;
+  border-radius: 2rem;
+  padding: 0.4rem 2.4rem;
+  top: 1.6rem;
+  right: 1rem;
+
+  animation-name: cimabaixo;
+  animation-duration: 1.5s;
+}
+/*Animação span*/
+@keyframes cimabaixo {
+  0% {
+    opacity: 0;
+    transform: translatey(-2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translatey(0);
+  }
+}
+
+/*Animação cards*/
+@keyframes baixocima {
+  0% {
+    opacity: 0;
+    transform: translateY(4rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
